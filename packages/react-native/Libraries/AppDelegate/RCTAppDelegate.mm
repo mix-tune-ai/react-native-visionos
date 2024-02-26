@@ -46,10 +46,6 @@ using namespace facebook::react;
 {
   self.reactNativeFactory = [[RCTReactNativeFactory alloc] initWithDelegate:self];
 
-  if (self.automaticallyLoadReactNativeWindow) {
-    [self loadReactNativeWindow:launchOptions];
-  }
-
   return YES;
 }
 
