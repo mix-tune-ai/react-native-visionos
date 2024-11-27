@@ -49,6 +49,8 @@ using namespace facebook::react;
   return YES;
 }
 
+
+#if !TARGET_OS_VISION
 - (void)loadReactNativeWindow:(NSDictionary *)launchOptions
 {
   UIView *rootView = [self.rootViewFactory viewWithModuleName:self.moduleName
@@ -62,6 +64,7 @@ using namespace facebook::react;
   _window.rootViewController = rootViewController;
   [_window makeKeyAndVisible];
 }
+#endif
 
 #pragma mark - UISceneDelegate
 

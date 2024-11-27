@@ -138,6 +138,7 @@ static UIColor *defaultPlaceholderColor(void)
 
 - (void)setDisableKeyboardShortcuts:(BOOL)disableKeyboardShortcuts
 {
+#if TARGET_OS_IOS
   // Initialize the initial values only once
   if (_initialValueLeadingBarButtonGroups == nil) {
     // Capture initial values of leading and trailing button groups
@@ -153,6 +154,7 @@ static UIColor *defaultPlaceholderColor(void)
     self.inputAssistantItem.leadingBarButtonGroups = _initialValueLeadingBarButtonGroups;
     self.inputAssistantItem.trailingBarButtonGroups = _initialValueTrailingBarButtonGroups;
   }
+#endif
   _disableKeyboardShortcuts = disableKeyboardShortcuts;
 }
 
